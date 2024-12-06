@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+
 
 const Sidebarcontext = createContext();
 
@@ -13,7 +13,7 @@ export default function Sidebar({ children }) {
       <nav className="h-full flex flex-col bg-white border-r shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-center">
           <h3
-            className={`overflow-hidden transition-all ${
+            className={`overflow-hidden transition-all text-blue-700 font-bold italic text-2xl ${
               expanded ? "w-32" : "w-0"
             }`}
             alt=""
@@ -36,27 +36,12 @@ export default function Sidebar({ children }) {
         <Sidebarcontext.Provider value={{ expanded }}>
           <ul className="flex-1 px-3 space-y-2">{children}</ul>
         </Sidebarcontext.Provider>
-        <div className="border-t flex p-3">
-          <img
-            src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
-            alt=""
-            className="w-10 h-10 rounded-md"
-          />
-          <div
-            className={`flex justify-between items-center overflow-hidden transition-all ${
-              expanded ? "w-52 ml-3" : "w-0"
-            }`}
-          >
-            <div className="leading-4">
-              <h4 className="font-semibold">Sethmi Danoshi</h4>
-              <span className="text-xs text-gray-600">
-                sethmidanoshi@gmail.com
-              </span>
-            </div>
+        
+            
 
-            <MoreVertIcon size={20} />
-          </div>
-        </div>
+            
+          
+      
       </nav>
     </aside>
   );
@@ -74,8 +59,8 @@ export function SidebarItem({ icon, text, active, alert, onClick }) {
         transition-colors group
         ${
           active
-            ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
-            : "hover:bg-indigo-50 text-gray-600"
+            ? "bg-gradient-to-tr from-blue-200 to-blue-100 text-blue-800"
+            : "hover:bg-blue-50 text-gray-600"
         }
       `}
     >
@@ -89,7 +74,7 @@ export function SidebarItem({ icon, text, active, alert, onClick }) {
       </span>
       {alert && (
         <div
-          className={`absolute right-2 w-2 h-2 rounded bg-indigo-400 ${
+          className={`absolute right-2 w-2 h-2 rounded bg-blue-400 ${
             expanded ? "" : "top-2"
           }`}
         />

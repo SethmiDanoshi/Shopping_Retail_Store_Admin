@@ -21,7 +21,7 @@ const Analytics = () => {
       {
         label: "Sales",
         data: [20000, 30000, 25000, 27000, 60000, 38000, 29000],
-        backgroundColor: "#6366F1",
+        backgroundColor: "#2da3fc",
         borderRadius: 5, // Rounded bar corners
       },
     ],
@@ -63,7 +63,7 @@ const Analytics = () => {
   <h1 className="text-lg font-bold">Analytics </h1>
 </div>
       <div className="bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-lg font-semibold text-gray-800 mb-4">Total Sales</h2>
+        <h2 className="text-2xl font-bold mb-6 text-blue-700 text-center">Total Sales</h2>
         <div className="h-64">
           <Bar data={salesData} options={options} />
         </div>

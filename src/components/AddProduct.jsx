@@ -40,9 +40,9 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen flex justify-center items-center">
+    <div className="p-6  min-h-screen flex justify-center items-center">
       <div className="bg-white shadow-lg border rounded-lg w-full max-w-4xl p-6">
-        <div className="bg-indigo-500 text-white text-center py-2 rounded-t-lg">
+        <div className="bg-blue-500 text-white text-center py-2 rounded-t-lg">
           <h1 className="text-2xl font-bold">Add New Product</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
@@ -72,7 +72,7 @@ const AddProduct = () => {
                   key={size}
                   onClick={() => handleSizeChange(size)}
                   className={`border px-3 py-1 rounded m-1 ${
-                    product.size.includes(size) ? "bg-indigo-500 text-white" : ""
+                    product.size.includes(size) ? "bg-blue-700 text-white" : ""
                   }`}
                 >
                   {size}
@@ -175,7 +175,7 @@ const AddProduct = () => {
           {/* New "See Product Details" Button */}
           <button
             onClick={() => console.log(product)} // You can replace this with a redirect or any other action
-            className="w-full mt-4 bg-indigo-500 text-white py-2 rounded"
+            className="w-full mt-4 bg-blue-500 text-white py-2 rounded"
           >
             See Product Details
           </button>

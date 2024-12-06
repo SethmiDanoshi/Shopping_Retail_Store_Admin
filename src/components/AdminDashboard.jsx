@@ -14,12 +14,12 @@ export class AdminDashboard extends Component {
 
   render() {
     return (
-        <div className="mt-5 p-6 bg-gray-100 min-h-screen">
+        <div className="mt-5 p-6 min-h-screen">
            
         {/* Banner Component */}
         <Banner />
 
-      <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-6 bg-gray-100 min-h-screen h-36">
+      <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-6  min-h-screen h-36">
         {this.metrics.map((metric, index) => (
           <MetricsCard
             key={index}
@@ -36,4 +36,6 @@ export class AdminDashboard extends Component {
 }
 
 export default AdminDashboard;
+
+
 

@@ -65,17 +65,17 @@ const ViewOrders = () => {
       case "High":
       case "Cancelled":
       case "Refund":
-        return "text-red-600 font-bold";
+        return "text-red-700 font-bold";
       case "Paid":
       case "Delivered":
-        return "text-green-600 font-bold";
+        return "text-green-800 font-bold";
       case "Packed":
         case "Normal": 
-        return "text-blue-600 font-bold";
+        return "text-blue-700 font-bold";
         case "Low": 
         return "text-yellow-500 font-bold";
       default:
-        return "text-indigo-400 font-bold";
+        return "text-indigo-500 font-bold";
     }
   };
 

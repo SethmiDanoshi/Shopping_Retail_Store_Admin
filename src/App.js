@@ -4,7 +4,16 @@ import './App.css';
 
 import { AdminDashboard } from './components/AdminDashboard';
 import Sidebar, { SidebarItem } from './components/Sidebar';
-import { BarChart, Boxes, LayoutDashboard, LifeBuoy, Package, Settings, UserCircle } from 'lucide-react';
+
+// Import Material-UI icons
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import PersonIcon from '@mui/icons-material/Person';
+import InventoryIcon from '@mui/icons-material/Inventory';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import SettingsIcon from '@mui/icons-material/Settings';
+import HelpIcon from '@mui/icons-material/Help';
+
 import Profile from './components/Profile';
 import ProductList from './components/ProductList';
 import ViewOrders from './components/ViewOrders';
@@ -17,47 +26,26 @@ function App() {
         {/* Sidebar Component */}
         <Sidebar>
           <Link to="/" className="sidebar-link">
-            <SidebarItem
-              icon={<LayoutDashboard size={20} />}
-              text="Dashboard"
-            />
+            <SidebarItem icon={<DashboardIcon />} text="Dashboard" />
           </Link>
           <Link to="/profile" className="sidebar-link">
-            <SidebarItem
-              icon={<UserCircle size={20} />}
-              text="Profile"
-            />
+            <SidebarItem icon={<PersonIcon />} text="Profile" />
           </Link>
           <Link to="/products" className="sidebar-link">
-            <SidebarItem
-              icon={<Boxes size={20} />}
-              text="Products"
-            />
+            <SidebarItem icon={<InventoryIcon />} text="Products" />
           </Link>
           <Link to="/orders" className="sidebar-link">
-            <SidebarItem
-              icon={<Package size={20} />}
-              text="Orders"
-            />
+            <SidebarItem icon={<ShoppingBagIcon />} text="Orders" />
           </Link>
           <Link to="/analytics" className="sidebar-link">
-            <SidebarItem
-              icon={<BarChart size={20} />}
-              text="Analytics"
-            />
+            <SidebarItem icon={<BarChartIcon />} text="Analytics" />
           </Link>
           <hr className="my-3" />
           <Link to="/settings" className="sidebar-link">
-            <SidebarItem
-              icon={<Settings size={20} />}
-              text="Settings"
-            />
+            <SidebarItem icon={<SettingsIcon />} text="Settings" />
           </Link>
           <Link to="/help" className="sidebar-link">
-            <SidebarItem
-              icon={<LifeBuoy size={20} />}
-              text="Help"
-            />
+            <SidebarItem icon={<HelpIcon />} text="Help" />
           </Link>
         </Sidebar>
 
